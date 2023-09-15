@@ -1,0 +1,306 @@
+/* navigation menu */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+  }
+  
+  .nav>.nav-header {
+    display: inline;
+  }
+  
+  .nav>.nav-header>.nav-title {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin-left: 30px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/04/99/74/45/1000_F_499744566_ark5O5JZ7fCkvXY4i8EQ3716mTQfUBBc.jpg");
+    background-size: cover;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+  
+  }
+  
+  .nav>.nav-btn {
+    display: none;
+  }
+  
+  .nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 40px 13px 10px;
+    text-decoration: none;
+    color: black;
+    height: 60px;
+  }
+  
+  .nav>.nav-links>a:hover {
+    border-bottom: 3.5px solid rgb(108, 28, 205);
+  }
+  
+  .nav>#nav-check {
+    display: none;
+  }
+  
+  
+  @media (max-width:630px) {
+    .nav>.nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+  
+    .nav>.nav-btn>label {
+      display: inline-block;
+      width: 50px;
+      height: 60px;
+      padding: 13px;
+    }
+  
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  
+    .nav>.nav-btn>label>span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid black;
+    }
+  
+    .nav>.nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #ccc;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+  
+    .nav>.nav-links>a {
+      display: block;
+      width: 100%;
+    }
+  
+    .nav>#nav-check:not(:checked)~.nav-links {
+      height: 0px;
+    }
+  
+    .nav>#nav-check:checked~.nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  
+    main .content {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://w0.peakpx.com/wallpaper/925/867/HD-wallpaper-widebody-huracan-car-carbon-gold-grey-lamborghini-new-supercar.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 900px;
+      /* align-items: center; */
+      justify-content: flex-end;
+    }
+  
+    .profile:hover .submenu {
+      display: block;
+      position: relative;
+      left: 10%;
+      top: 30px;
+      width: 100%;
+      background-color: white;
+    }
+  
+  }
+  
+  
+  .content {
+    /* background-color: red; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://wallpaperaccess.com/full/297903.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    display: flex;
+  }
+  
+  .content1 {
+    height: 300px;
+    width: 300px;
+    /* background-color: red; */
+    margin-left: 100px;
+    color: #ccc;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+  }
+  
+  .content1 p {
+    margin-top: 25px;
+  }
+  
+  .content1 button {
+    margin-top: 25px;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .content1 .read:hover {
+    background-color: blue;
+  }
+  
+  .submenu {
+    background-color: #ccc;
+    border: 2px solid grey;
+    height: 300px;
+    width: 228px;
+    position: absolute;
+    top: 60px;
+    left: 85%;
+    color: black;
+    display: none;
+  }
+  
+  .profile:hover .submenu {
+    display: block;
+  }
+  
+  .submenu h4 {
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+  }
+  
+  .submenu p {
+    font-size: 16px;
+    position: relative;
+    bottom: 25px;
+    left: 5px;
+    color: black;
+  }
+  
+  .login {
+    position: relative;
+    bottom: 25px;
+    left: 5px;
+    margin: 15px 0 15px 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'segoe ui';
+  }
+  
+  .login:hover {
+    background-color: rgb(18, 9, 176);
+    color: #ccc;
+  }
+  
+  .submenu li {
+    list-style: none;
+    font-size: 16px;
+    padding: 4px;
+    position: relative;
+    left: 5px;
+    bottom: 20px;
+  }
+
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    font-family: 'segoe ui';
+}
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1100px;
+}
+/* Style the container for the About Us content */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+    
+}
+.about-container p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+/* Style headings */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    color:  rgb(187, 153, 229);
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    color:  rgb(187, 153, 229);
+}
+
+/* Style team members */
+.team-member {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+.team-member:hover {
+    border: 1px solid #ccc;
+
+}
+.team-member img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+/* Style team member names */
+.team-member h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Style team member descriptions */
+.team-member p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+@media screen and (max-width: 630px)  {
+    body{
+        height: 1600px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-size: cover;
+    }
+
+}
